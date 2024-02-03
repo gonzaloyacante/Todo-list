@@ -1,0 +1,48 @@
+.container-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 1rem;
+}
+
+.item-icon {
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  padding: 0.6rem;
+}
+
+.item-icon:hover {
+  background-color: #8e8e8e7a;
+  cursor: pointer;
+}
+
+.container-item:hover .item-icon_close {
+  visibility: visible;
+}
+
+.item-icon_close {
+  visibility: hidden;
+}
+
+.item-icon_check {
+  border-radius: 50%;
+  border: solid #999;
+  height: 4rem;
+  width: 4rem;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+
+.item-text {
+  flex-grow: 1;
+  text-align: start;
+  margin-left: 1rem;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #999;
+}

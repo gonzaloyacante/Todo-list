@@ -1,0 +1,23 @@
+#root {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 100vh;
+}
+
+header {
+  text-align: center;
+  grid-area: 2 / 2 / 4 / 12;
+}
+
+main {
+  text-align: center;
+  grid-area: 4 / 2 / 11 / 12;
+}
+
+footer {
+  grid-area: 11 / 6 / 12 / 8;
+  text-align: center;
+}
