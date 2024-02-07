@@ -1,26 +1,16 @@
 import { TodoItem } from "./TodoItem";
+import { searchedTodos, sortedTodos } from "../assets/logic.js";
 
 function TodoList(props) {
   const { todos, setTodos, searchValue } = props;
 
-  const sortedTodos = [...todos].sort((a, b) => {
-    if (a.completed && !b.completed) {
-      return 1;
-    }
-    if (!a.completed && b.completed) {
-      return -1;
-    }
-    return 0;
-  });
-
-  const searchedTodos = sortedTodos.filter((todo) =>
-    todo.text.toLowerCase().includes(searchValue.toLowerCase())
-  );
+  const sorted = sortedTodos(todos);
+  const searched = searchedTodos(sorted, searchValue);
 
   return (
     <ul>
-      {searchedTodos != 0 ? (
-        searchedTodos.map((todo) => (
+      {searched != 0 ? (
+        searched.map((todo) => (
           <TodoItem
             key={todo.text}
             text={todo.text}

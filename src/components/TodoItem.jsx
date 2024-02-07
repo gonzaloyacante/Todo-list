@@ -1,31 +1,19 @@
 import { AiOutlineClose, AiOutlineCheck } from "react-icons/ai";
+import { handleCompleteTask, handleDeleteTask } from "../assets/logic";
 
 function TodoItem(props) {
   const { text, completed, setTodos } = props;
 
-  const handleCompleteTask = () => {
-    setTodos((prevTodos) =>
-      prevTodos.map((todo) => {
-        if (todo.text === text) {
-          return { ...todo, completed: !todo.completed };
-        }
-        return todo;
-      })
-    );
-  };
-
-  const handleDeleteTask = () => {
-    setTodos((prevTodos) => prevTodos.filter((todo) => todo.text !== text));
-  };
-
   return (
     <li className={`container-item ${completed ? "completed" : ""}`}>
-      <span className="item-icon_check" onClick={handleCompleteTask}>
+      <span
+        className="item-icon_check"
+        onClick={() => handleCompleteTask(text, setTodos)}>
         {completed ? <AiOutlineCheck className="item-icon" /> : ""}
       </span>
       <p className="item-text">{text}</p>
       <AiOutlineClose
-        onClick={handleDeleteTask}
+        onClick={() => handleDeleteTask(text, setTodos)}
         className="item-icon_close item-icon"
       />
     </li>

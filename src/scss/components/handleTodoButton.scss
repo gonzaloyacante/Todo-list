@@ -1,0 +1,26 @@
+.todo-handle-button {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  padding: 0.5rem;
+  position: absolute;
+  background-color: #5858587a;
+
+  box-shadow: 0rem 0rem 5rem 0px rgba(0, 0, 0);
+}
+
+.todo-handle_button:hover,
+.todo-create_button:hover,
+.todo-delete_button:hover {
+  cursor: pointer;
+  background-color: #8e8e8e7a;
+}
+.todo-create_button {
+  right: 3rem;
+  bottom: 3rem;
+}
+.todo-delete_button {
+  left: 3rem;
+  bottom: 3rem;
+  padding: 1rem;
+}
