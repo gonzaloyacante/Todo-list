@@ -5,7 +5,10 @@ function TodoItem(props) {
   const { text, completed, setTodos } = props;
 
   return (
-    <li className={`container-item ${completed ? "completed" : ""}`}>
+    <li
+      className={`animate__animated animate__bounceInLeft container-item ${
+        completed ? "completed" : ""
+      }`}>
       <span
         className="item-icon_check"
         onClick={() => handleCompleteTask(text, setTodos)}>
@@ -13,7 +16,7 @@ function TodoItem(props) {
       </span>
       <p className="item-text">{text}</p>
       <AiOutlineClose
-        onClick={() => handleDeleteTask(text, setTodos)}
+        onClick={(event) => handleDeleteTask(event, text, setTodos)}
         className="item-icon_close item-icon"
       />
     </li>

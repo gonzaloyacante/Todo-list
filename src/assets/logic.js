@@ -27,6 +27,10 @@ export const handleCompleteTask = (text, setTodos) => {
   );
 };
 
-export const handleDeleteTask = (text, setTodos) => {
-  setTodos((prevTodos) => prevTodos.filter((todo) => todo.text !== text));
+export const handleDeleteTask = (event, text, setTodos) => {
+  const element = event.currentTarget.parentElement;
+  element.classList.add("animate__animated", "animate__bounceOutRight");
+  setTimeout(() => {
+    setTodos((prevTodos) => prevTodos.filter((todo) => todo.text !== text));
+  }, 500); // Ajusta este tiempo según la duración de tu animación
 };
