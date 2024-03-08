@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import { AiOutlinePlus, AiOutlineDelete } from "react-icons/ai";
+import { TodoContext } from "./TodoContext";
 
 function CreateTodoButton() {
   return (
@@ -11,7 +13,9 @@ function CreateTodoButton() {
   );
 }
 
-function DeleteTodoButton({ resetListToStorage, setTodos, defaultTodos }) {
+function DeleteTodoButton() {
+  const { resetListToStorage, setTodos, defaultTodos } =
+    useContext(TodoContext);
   return (
     <>
       <AiOutlineDelete

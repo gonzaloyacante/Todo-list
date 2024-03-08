@@ -1,0 +1,18 @@
+.container-list {
+  width: 80vw; /* Ancho del div */
+  height: 65vh; /* Altura máxima del div */
+  border: 1px solid #ccc; /* Borde para visualización */
+  overflow-y: auto;
+  border: none;
+  padding-right: 1rem;
+}
+
+.container-list::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: none;
+}
+
+.container-list::-webkit-scrollbar-thumb {
+  background-color: $bg-secondary;
+  border-radius: 5px;
+}

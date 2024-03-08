@@ -1,18 +1,8 @@
 #root {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
   height: 100vh;
-}
-
-header {
-  text-align: center;
-  grid-area: 2 / 2 / 2 / 12;
-}
-
-main {
-  text-align: center;
-  grid-area: 3 / 2 / 13 / 12;
 }

@@ -1,7 +1,10 @@
-import { AiOutlineSearch } from "react-icons/ai";
+import { useContext } from "react";
 
-function TodoSearch(props) {
-  const { searchValue, setSearchValue } = props;
+import { AiOutlineSearch } from "react-icons/ai";
+import { TodoContext } from "./TodoContext";
+
+function TodoSearch() {
+  const { searchValue, setSearchValue } = useContext(TodoContext);
 
   return (
     <>
