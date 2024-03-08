@@ -7,14 +7,17 @@ function TodoItem(props) {
   return (
     <li
       className={`animate__animated animate__bounceInLeft container-item ${
-        completed ? "completed" : ""
+        completed && "completed"
       }`}>
       <span
         className="item-icon_check"
         onClick={() => handleCompleteTask(text, setTodos)}>
-        {completed ? <AiOutlineCheck className="item-icon" /> : ""}
+        {completed && <AiOutlineCheck className="item-icon" />}
       </span>
-      <p className="item-text">{text}</p>
+      <div>
+        <p className="item-text">{text}</p>
+        <p></p>
+      </div>
       <AiOutlineClose
         onClick={(event) => handleDeleteTask(event, text, setTodos)}
         className="item-icon_close item-icon"

@@ -8,7 +8,11 @@
   align-items: center;
   margin: 3rem 0rem;
   border-radius: 1.6rem;
-  box-shadow: 0rem 0rem 5rem 0px rgba(0, 0, 0),
+  box-shadow: 0rem 0rem 5rem 0px rgba(0, 0, 0);
+}
+.todo-search_label:focus {
+  border: 2px solid $color-primary;
+  box-shadow: 0rem 0rem 5rem 0px $color-primary;
 }
 
 .todo-search-icon {
@@ -24,4 +28,14 @@
   border: none;
   caret-color: #fff;
   color: #fff;
+}
+
+@media screen and (min-width: 1000px) {
+  .container-item:hover .item-icon_close {
+    visibility: visible;
+  }
+
+  .item-icon_close {
+    visibility: hidden;
+  }
 }

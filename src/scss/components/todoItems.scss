@@ -4,6 +4,9 @@
   align-items: center;
   flex-direction: row;
   margin-bottom: 1rem;
+  background-color: $bg-secondary;
+  height: 6rem;
+  padding: 0rem 1rem;
 }
 
 .item-icon {
@@ -16,14 +19,6 @@
 .item-icon:hover {
   background-color: #8e8e8e7a;
   cursor: pointer;
-}
-
-.container-item:hover .item-icon_close {
-  visibility: visible;
-}
-
-.item-icon_close {
-  visibility: hidden;
 }
 
 .item-icon_check {

@@ -20,7 +20,6 @@ function App() {
   const [searchValue, setSearchValue] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
-  const [isLocalStorageLoaded, setIsLocalStorageLoaded] = useState(false); // Nuevo estado
 
   useEffect(() => {
     const fetchData = () => {
@@ -31,15 +30,13 @@ function App() {
             todosFromStorage !== null && todosFromStorage !== "undefined"
               ? JSON.parse(todosFromStorage)
               : defaultTodos;
-          console.log(loadedTodos, todosFromStorage, "storage");
           setTodos(loadedTodos);
-          setIsLocalStorageLoaded(true);
           setIsLoading(false);
         } catch (error) {
           setError(error);
           setIsLoading(false);
         }
-      }, 3000);
+      }, 2000);
     };
 
     fetchData();
@@ -49,12 +46,12 @@ function App() {
   const totalTodos = todos.length;
 
   useEffect(() => {
-    if (isLocalStorageLoaded) {
-      // Solo guardar en el almacenamiento local cuando los datos han sido cargados
+    if (!isLoading) {
       console.log(todos, "Save");
       saveListToStorage(todos);
     }
-  }, [todos, isLocalStorageLoaded]);
+  }, [todos, isLoading]);
+
   return (
     <>
       <header>
@@ -71,14 +68,12 @@ function App() {
           error={error}
         />
       </main>
-      <footer>
-        <CreateTodoButton />
-        <DeleteTodoButton
-          resetListToStorage={resetListToStorage}
-          setTodos={setTodos}
-          defaultTodos={defaultTodos}
-        />
-      </footer>
+      <CreateTodoButton />
+      <DeleteTodoButton
+        resetListToStorage={resetListToStorage}
+        setTodos={setTodos}
+        defaultTodos={defaultTodos}
+      />
     </>
   );
 }

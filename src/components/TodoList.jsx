@@ -15,7 +15,7 @@ function TodoList(props) {
       {isLoading && (
         <Skeleton
           count={5}
-          highlightColor="#00d154"
+          highlightColor="#1d1d20"
           baseColor="#242727"
           height="5rem"
           borderRadius="1rem"

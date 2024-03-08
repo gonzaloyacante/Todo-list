@@ -2,12 +2,9 @@
   height: 5rem;
   width: 5rem;
   border-radius: 50%;
-  padding: 0.5rem;
   position: absolute;
-  right: 3rem;
-  bottom: 3rem;
   background-color: $bg-secondary;
-
+  padding: 1rem;
   box-shadow: 0rem 0rem 5rem 0px #000000;
 }
 
@@ -15,11 +12,8 @@
 .todo-create_button:hover,
 .todo-delete_button:hover {
   cursor: pointer;
-  animation: border .4s ease 1 forwards;
-  border: 1px solid $color-primary;
-  background-color: $color-primary;
+  border: 2px solid $color-primary;
   box-shadow: 0rem 0rem 5rem 0px $color-primary;
-
 }
 .todo-create_button {
   right: 3rem;
@@ -28,23 +22,4 @@
 .todo-delete_button {
   left: 3rem;
   bottom: 3rem;
-  padding: 1rem;
-}
-
-@keyframes border{
-  0% {
-    border-width: 1px; /* Ancho inicial del borde */
-  }
-  25% {
-    border-width: 25%; /* Ancho del borde al 25% de la animación */
-  }
-  50% {
-    border-width: 50%; /* Ancho del borde al 50% de la animación */
-  }
-  75% {
-    border-width: 75%; /* Ancho del borde al 75% de la animación */
-  }
-  100% {
-    border-width: 100%; /* Ancho del borde al 100% de la animación */
-  }
 }
