@@ -1,14 +1,13 @@
 import { useContext } from "react";
 
-import Skeleton from "react-loading-skeleton";
-import "react-loading-skeleton/dist/skeleton.css";
-
 import { TodoContext } from "./TodoContext.jsx";
 import { TodoItem } from "./TodoItem";
+import { SkeletonLoader } from "./SkeletonLoader.jsx";
+
 import { searchedTodos, sortedTodos } from "../assets/logic.js";
 
 function TodoList() {
-  const { searchValue, todos, setTodos, isLoading, error } =
+  const { searchValue, todos, setTodos, isLoading, error, formatTodoDate } =
     useContext(TodoContext);
 
   const sorted = sortedTodos(todos);
@@ -17,13 +16,11 @@ function TodoList() {
   return (
     <ul className="container-list animate__animated animate__fadeIn">
       {isLoading && (
-        <Skeleton
-          count={5}
-          highlightColor="#1d1d20"
-          baseColor="#242727"
-          height="5rem"
-          borderRadius="1rem"
-        />
+        <>
+          <SkeletonLoader />
+          <SkeletonLoader />
+          <SkeletonLoader />
+        </>
       )}
       {error && <h2>Error</h2>}
       {searched == 0 && !isLoading && (
@@ -36,6 +33,8 @@ function TodoList() {
           <TodoItem
             key={todo.text}
             text={todo.text}
+            date={todo.date}
+            formatTodoDate={formatTodoDate}
             completed={todo.completed}
             setTodos={setTodos}
           />

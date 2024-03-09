@@ -6,6 +6,8 @@ import {
   defaultTodos,
 } from "../assets/storage.js";
 
+import { formatTodoDate } from "../assets/logic.js";
+
 const TodoContext = createContext();
 
 function TodoProvider({ children }) {
@@ -13,6 +15,7 @@ function TodoProvider({ children }) {
   const [searchValue, setSearchValue] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
 
   useEffect(() => {
     const fetchData = () => {
@@ -54,13 +57,16 @@ function TodoProvider({ children }) {
         setError,
         todos,
         setTodos,
-        completedTodos,
         searchValue,
         setSearchValue,
         totalTodos,
+        completedTodos,
         defaultTodos,
         saveListToStorage,
         resetListToStorage,
+        openModal,
+        setOpenModal,
+        formatTodoDate,
       }}>
       {children}
     </TodoContext.Provider>

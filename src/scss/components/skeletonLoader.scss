@@ -1,0 +1,58 @@
+/* SkeletonLoader.css */
+
+.skeleton-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.skeleton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 0 1rem;
+  height: 6rem;
+  background-color: $bg-secondary;
+  border-radius: 1rem;
+}
+
+.skeleton-avatar {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: $color-primary;
+  animation: fadeIn 1s infinite alternate;
+}
+
+.skeleton-content {
+  width: 70%;
+  height: 100%;
+  margin: 0rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: start;
+  animation: fadeIn 1s infinite alternate;
+}
+
+.skeleton-line {
+  height: 1.6rem;
+  background-color: $color-primary;
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.skeleton-line:last-child {
+  width: 80%;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

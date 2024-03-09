@@ -6,8 +6,20 @@ export const resetListToStorage = () => {
 };
 
 export const defaultTodos = [
-  { text: "Cortar cebolla", completed: true },
-  { text: "Comprar tomate", completed: false },
-  { text: "Pasear al perro", completed: true },
-  { text: "Saltar", completed: false },
+  {
+    text: "Cortar cebolla",
+    date: new Date("2024-03-04T12:00:00Z"),
+    completed: true,
+  },
+  {
+    text: "Comprar tomate",
+    date: new Date("2024-03-05T12:00:00Z"),
+    completed: false,
+  },
+  {
+    text: "Pasear al perro",
+    date: new Date("2024-03-06T12:00:00Z"),
+    completed: true,
+  },
+  { text: "Saltar", date: new Date("2024-03-01T12:00:00Z"), completed: false },
 ];

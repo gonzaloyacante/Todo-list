@@ -1,17 +1,41 @@
-.container-item {
+.item-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  margin-bottom: 1rem;
-  background-color: $bg-secondary;
+  padding: 0 1rem;
   height: 6rem;
-  padding: 0rem 1rem;
+  background-color: $bg-secondary;
   border-radius: 1rem;
+}
+
+.item-content {
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin: 0rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.item-text {
+  font-size: 1.6rem;
+}
+
+.item-date {
+  font-size: 1.4rem;
 }
 
 .item-icon {
   border-radius: 50%;
+  place-content: center;
   height: 4rem;
   width: 4rem;
   padding: 0.6rem;
@@ -28,14 +52,9 @@
   height: 4rem;
   width: 4rem;
   display: grid;
-  place-content: center;
+  justify-content: center;
+  align-content: center;
   cursor: pointer;
-}
-
-.item-text {
-  flex-grow: 1;
-  text-align: start;
-  margin-left: 1rem;
 }
 
 .completed {

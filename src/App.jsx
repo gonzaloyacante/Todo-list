@@ -1,7 +1,9 @@
 import "./scss/App.scss";
+
 import { TodoCounter } from "./components/TodoCounter";
 import { TodoSearch } from "./components/TodoSearch";
 import { TodoList } from "./components/TodoList";
+
 import {
   CreateTodoButton,
   DeleteTodoButton,
