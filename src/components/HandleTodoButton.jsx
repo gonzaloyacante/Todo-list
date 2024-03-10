@@ -1,11 +1,11 @@
 import { useContext } from "react";
-import { AiOutlinePlus, AiOutlineDelete } from "react-icons/ai";
+import { FaCheck, FaRegTrashAlt } from "react-icons/fa";
 import { TodoContext } from "./TodoContext";
 
 function CreateTodoButton() {
   return (
     <>
-      <AiOutlinePlus
+      <FaCheck
         onClick={(event) => console.log("Hola", event)}
         className="todo-handle_button todo-create_button"
       />
@@ -18,7 +18,7 @@ function DeleteTodoButton() {
     useContext(TodoContext);
   return (
     <>
-      <AiOutlineDelete
+      <FaRegTrashAlt
         onClick={() => {
           resetListToStorage();
           setTodos(defaultTodos);

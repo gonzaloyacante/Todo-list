@@ -16,6 +16,7 @@ function TodoProvider({ children }) {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
   const [openModal, setOpenModal] = useState(false);
+  const [sortBy, setSortBy] = useState('date');
 
   useEffect(() => {
     const fetchData = () => {
@@ -67,6 +68,8 @@ function TodoProvider({ children }) {
         openModal,
         setOpenModal,
         formatTodoDate,
+        sortBy,
+        setSortBy,
       }}>
       {children}
     </TodoContext.Provider>

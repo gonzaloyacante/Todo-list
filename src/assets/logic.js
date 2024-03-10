@@ -1,12 +1,21 @@
-export const sortedTodos = (todos) => {
+export const sortedTodos = (todos, sortBy) => {
   return [...todos].sort((a, b) => {
-    if (a.completed && !b.completed) {
-      return 1;
+    switch (sortBy) {
+      case 'dateRecent':
+        return new Date(b.date) - new Date(a.date);
+      case 'dateOld':
+        return new Date(a.date) - new Date(b.date);
+      case 'alphabeticalAZ':
+        return a.text.localeCompare(b.text);
+      case 'alphabeticalZA':
+        return b.text.localeCompare(a.text);
+      case 'completedFirst':
+        return a.completed === b.completed ? 0 : a.completed ? -1 : 1;
+      case 'completedLast':
+        return a.completed === b.completed ? 0 : a.completed ? 1 : -1;
+      default:
+        return 0;
     }
-    if (!a.completed && b.completed) {
-      return -1;
-    }
-    return 0;
   });
 };
 

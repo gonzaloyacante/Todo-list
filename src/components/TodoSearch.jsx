@@ -1,6 +1,6 @@
 import { useContext } from "react";
 
-import { AiOutlineSearch } from "react-icons/ai";
+import { FaSearch } from "react-icons/fa";
 import { TodoContext } from "./TodoContext";
 
 function TodoSearch() {
@@ -9,7 +9,7 @@ function TodoSearch() {
   return (
     <>
       <label className="todo-search_label" htmlFor="todo-search">
-        <AiOutlineSearch className="todo-search-icon" />
+        <FaSearch className="todo-search-icon" />
         <input
           id="todo-search"
           className="todo-search_input"

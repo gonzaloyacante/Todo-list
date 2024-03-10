@@ -1,10 +1,9 @@
 .container-list {
-  width: 80vw; /* Ancho del div */
-  height: 65vh; /* Altura máxima del div */
-  border: 1px solid #ccc; /* Borde para visualización */
+  width: 80vw;
+  height: 65vh;
+  border: 1px solid #ccc;
   overflow-y: auto;
   border: none;
-  padding-right: 1rem;
 }
 
 .container-list::-webkit-scrollbar {

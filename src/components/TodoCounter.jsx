@@ -11,7 +11,7 @@ function TodoCounter() {
       )}
       {completedTodos === totalTodos && totalTodos !== 0 && (
         <h2 className="animate__animated animate__fadeIn">
-          Completaste todas las tareas!
+          Todo esta completo!
         </h2>
       )}
       {completedTodos !== totalTodos && (

@@ -1,4 +1,4 @@
-import { AiOutlineClose, AiOutlineCheck } from "react-icons/ai";
+import { FaCheck, FaTimes } from "react-icons/fa";
 import { handleCompleteTask, handleDeleteTask } from "../assets/logic";
 
 function TodoItem(props) {
@@ -15,13 +15,13 @@ function TodoItem(props) {
         <span
           className="item-icon_check"
           onClick={() => handleCompleteTask(text, setTodos)}>
-          {completed && <AiOutlineCheck className="item-icon" />}
+          {completed && <FaCheck className="item-icon" />}
         </span>
         <div className="item-content">
           <p className="item-text">{text}</p>
           <p className="item-date">Creado: {formattedDate}</p>
         </div>
-        <AiOutlineClose
+        <FaTimes
           onClick={(event) => handleDeleteTask(event, text, setTodos)}
           className="item-icon_close item-icon"
         />
