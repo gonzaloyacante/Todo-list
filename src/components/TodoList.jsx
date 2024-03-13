@@ -3,7 +3,6 @@ import { useContext } from "react";
 import { TodoContext } from "./TodoContext.jsx";
 import { TodoItem } from "./TodoItem";
 import { SkeletonLoader } from "./SkeletonLoader.jsx";
-import { TodoSortButton } from "./TodoSortButton.jsx";
 
 import { searchedTodos, sortedTodos } from "../assets/logic.js";
 
@@ -16,7 +15,6 @@ function TodoList() {
     error,
     formatTodoDate,
     sortBy,
-    setSortBy,
   } = useContext(TodoContext);
 
   const sorted = sortedTodos(todos, sortBy);
@@ -24,7 +22,6 @@ function TodoList() {
 
   return (
     <ul className="container-list animate__animated animate__fadeIn">
-      <TodoSortButton sortBy={sortBy} setSortBy={setSortBy} />
       {isLoading && (
         <>
           <SkeletonLoader />

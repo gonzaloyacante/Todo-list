@@ -4,6 +4,7 @@ import "./scss/App.scss";
 
 import { TodoCounter } from "./components/TodoCounter";
 import { TodoSearch } from "./components/TodoSearch";
+import { TodoSortButton } from "./components/TodoSortButton.jsx";
 import { TodoList } from "./components/TodoList";
 import { Modal } from "./components/Modal";
 
@@ -15,7 +16,7 @@ import {
 import { TodoContext } from "./components/TodoContext.jsx";
 
 function App() {
-  const { openModal } = useContext(TodoContext);
+  const { openModal, sortBy, setSortBy } = useContext(TodoContext);
 
   return (
     <>
@@ -24,6 +25,7 @@ function App() {
       <header>
         <TodoCounter />
         <TodoSearch />
+        <TodoSortButton sortBy={sortBy} setSortBy={setSortBy} />
       </header>
       <main>
         <TodoList />
