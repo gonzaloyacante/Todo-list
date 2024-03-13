@@ -13,15 +13,15 @@ html {
 }
 
 body {
-  font-size: 1.6rem;
   min-height: 100vh;
+  background-color: $bg-primary;
+  color: $text-primary;
   margin: 0;
+  font-size: $md-font-size;
   font-family: $font-family-primary;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: $bg-primary;
-  color: $text-primary;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 li {

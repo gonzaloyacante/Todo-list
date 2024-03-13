@@ -8,7 +8,7 @@ function TodoItem(props) {
 
   return (
     <li
-      className={`item-container animate__animated animate__bounceInLeft container-item ${
+      className={`item-container animate__animated animate__bounceInLeft ${
         completed && "completed"
       }`}>
       <div className="item">

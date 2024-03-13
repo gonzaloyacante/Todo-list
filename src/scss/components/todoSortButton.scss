@@ -1,16 +1,16 @@
 .container {
   width: 20rem;
-  margin: 1rem auto 2rem auto;
+  margin: $spacing-md auto $spacing-lg auto;
   text-align: center;
 }
 
 .dropdown {
   width: 100%;
-  height: 4rem;
+  height: $size-lg;
   display: inline-block;
   background-color: $bg-secondary;
-  border-radius: 1rem;
-  box-shadow: 0rem 0rem 5rem 0rem rgba(0, 0, 0, 0.2);
+  border-radius: $size-xs;
+  box-shadow: $shadow-md rgba(0, 0, 0, 0.2);
   transition: all 0.5s ease;
   position: relative;
   font-size: $md-font-size;
@@ -18,7 +18,7 @@
   text-align: left;
 
   &:hover {
-    box-shadow: 0rem 0rem 5rem 0rem rgba(0, 0, 0, 0.4);
+    box-shadow: $shadow-md rgba(0, 0, 0, 0.4);
   }
 
   &:active {
@@ -26,9 +26,9 @@
   }
 
   &.active {
-    box-shadow: 0rem 0rem 5rem 0rem rgba(0, 0, 0, 0.4);
-    border-radius: 1.6rem 1.6rem 0 0;
-    background-color: $bg-primary;
+    box-shadow: $shadow-md rgba(0, 0, 0, 0.4);
+    border-radius: $size-xs $size-xs 0 0;
+    background-color: $bg-secondary;
     transform-origin: center;
 
     .select > svg:last-child {
@@ -42,12 +42,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 4rem;
+    height: $size-lg;
 
     > svg {
-      font-size: 1.6rem;
+      font-size: $lg-font-size;
       color: $color-primary;
-      margin: 0rem 1rem;
+      margin: 0 $spacing-sm;
     }
   }
 
@@ -56,30 +56,30 @@
     background-color: $bg-secondary;
     width: 100%;
     left: 0;
-    margin-top: 1rem;
-    box-shadow: 0rem 0rem 5rem 0px rgba(0, 0, 0);
-    border-radius: 1rem;
+    margin-top: $spacing-xs;
+    box-shadow: $shadow-md rgba(0, 0, 0);
+    border-radius: 0 0 $size-xs $size-xs;
     overflow: hidden;
     display: none;
     height: auto;
-    z-index: 9;
+    z-index: $z-index-dropdown;
 
     li {
       display: flex;
       align-items: center;
       justify-content: start;
-      height: 4rem;
+      height: $size-lg;
       transition: all 0.2s ease-in-out;
       cursor: pointer;
 
       > svg {
-        font-size: 1.6rem;
+        font-size: $lg-font-size;
         color: $color-primary;
-        margin: 0rem 1rem;
+        margin: 0 $spacing-sm;
       }
 
       &:hover {
-        background-color: #8e8e8e7a;
+        background-color: rgba(142, 142, 142, 0.478);
       }
 
       &:active {

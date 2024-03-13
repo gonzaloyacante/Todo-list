@@ -1,7 +1,7 @@
 .container-list {
   width: 80vw;
   height: 65vh;
-  border: 1px solid #ccc;
+  border: 0.1rem solid #ccc;
   overflow-y: auto;
   border: none;
 }
@@ -13,5 +13,5 @@
 
 .container-list::-webkit-scrollbar-thumb {
   background-color: $bg-secondary;
-  border-radius: 5px;
+  border-radius: $size-xs;
 }

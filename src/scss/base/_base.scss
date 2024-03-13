@@ -1,10 +1,43 @@
+// Variables de colores
 $color-primary: #00d154;
-
+$color-secondary: #242727;
 $bg-primary: #1d1d20;
 $bg-secondary: #242727;
-
 $text-primary: #d9d9d9;
+
+// Variables de fuente
+$font-family-primary: "Poppins", sans-serif;
 $sm-font-size: 1.2rem;
 $md-font-size: 1.4rem;
 $lg-font-size: 1.6rem;
-$font-family-primary: "Poppins", sans-serif;
+
+// Variables de tamaño
+$size-xs: 1rem;
+$size-sm: 2rem;
+$size-md: 3rem;
+$size-lg: 4rem;
+$size-xl: 5rem;
+$size-xxl: 6rem;
+
+// Variables de espaciado
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 2rem;
+$spacing-lg: 3rem;
+$spacing-xl: 4rem;
+
+// Variables de breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Variables de sombras
+$shadow-sm: 0 0 0.4rem 0;
+$shadow-md: 0 0 0.8rem 0;
+$shadow-lg: 0 0 1.2rem 0;
+
+// Variables de z-index
+$z-index-modal: 1000;
+$z-index-dropdown: 500;
+$z-index-tooltip: 200;

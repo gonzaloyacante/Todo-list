@@ -7,7 +7,6 @@ const SkeletonLoader = () => {
           <div className="skeleton-line"></div>
           <div className="skeleton-line"></div>
         </div>
-        <div className="skeleton-avatar"></div>
       </div>
     </li>
   );

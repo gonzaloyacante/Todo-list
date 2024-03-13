@@ -1,31 +1,33 @@
 .todo-handle_button {
-  height: 5rem;
-  width: 5rem;
+  height: $size-xl;
+  width: $size-xl;
   border-radius: 50%;
   position: absolute;
   background-color: $bg-secondary;
-  box-shadow: 0rem 0rem 5rem 0px #000000;
+  box-shadow: $shadow-lg $bg-primary;
   display: grid;
   place-items: center;
-}
 
-.todo-handle_button > svg {
-  height: 3rem;
-  width: 3rem;
-}
+  > svg {
+    height: $size-md;
+    width: $size-md;
+  }
 
-.todo-handle_button:hover,
-.todo-create_button:hover,
-.todo-delete_button:hover {
-  cursor: pointer;
-  border: 0.3rem solid $color-primary;
-  box-shadow: 0rem 0rem 5rem 0px $color-primary;
-}
-.todo-create_button {
-  right: 3rem;
-  bottom: 3rem;
-}
-.todo-delete_button {
-  left: 3rem;
-  bottom: 3rem;
+  &:hover,
+  &.todo-create_button:hover,
+  &.todo-delete_button:hover {
+    cursor: pointer;
+    border: 0.3rem solid $color-primary;
+    box-shadow: $shadow-lg $color-primary;
+  }
+
+  &.todo-create_button {
+    right: $spacing-lg;
+    bottom: $spacing-lg;
+  }
+
+  &.todo-delete_button {
+    left: $spacing-lg;
+    bottom: $spacing-lg;
+  }
 }

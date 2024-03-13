@@ -22,4 +22,20 @@ export const defaultTodos = [
     completed: true,
   },
   { text: "Saltar", date: new Date("2024-03-01T12:00:00Z"), completed: false },
+  {
+    text: "Cortar cebollas",
+    date: new Date("2024-03-04T12:00:00Z"),
+    completed: true,
+  },
+  {
+    text: "Comprar tomates",
+    date: new Date("2024-03-05T12:00:00Z"),
+    completed: false,
+  },
+  {
+    text: "Pasear al perros",
+    date: new Date("2024-03-06T12:00:00Z"),
+    completed: true,
+  },
+  { text: "Saltars", date: new Date("2024-03-01T12:00:00Z"), completed: false },
 ];
