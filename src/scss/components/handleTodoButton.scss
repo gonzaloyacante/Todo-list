@@ -4,15 +4,21 @@
   border-radius: 50%;
   position: absolute;
   background-color: $bg-secondary;
-  padding: 1rem;
   box-shadow: 0rem 0rem 5rem 0px #000000;
+  display: grid;
+  place-items: center;
+}
+
+.todo-handle_button > svg {
+  height: 3rem;
+  width: 3rem;
 }
 
 .todo-handle_button:hover,
 .todo-create_button:hover,
 .todo-delete_button:hover {
   cursor: pointer;
-  border: 2px solid $color-primary;
+  border: 0.3rem solid $color-primary;
   box-shadow: 0rem 0rem 5rem 0px $color-primary;
 }
 .todo-create_button {
