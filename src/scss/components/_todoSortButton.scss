@@ -1,12 +1,6 @@
-.container {
-  width: 20rem;
-  margin: $spacing-md auto $spacing-lg auto;
-  text-align: center;
-}
-
-.dropdown {
-  width: 100%;
-  height: $size-lg;
+.dropdown-container {
+  width: auto;
+  height: $size-xl;
   display: inline-block;
   background-color: $bg-secondary;
   border-radius: $size-xs;
@@ -27,8 +21,8 @@
 
   &.active {
     box-shadow: $shadow-md rgba(0, 0, 0, 0.4);
-    border-radius: $size-xs $size-xs 0 0;
     background-color: $bg-secondary;
+    border-radius: $size-xs $size-xs 0 0;
     transform-origin: center;
 
     .select > svg:last-child {
@@ -42,26 +36,40 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: $size-lg;
+    height: 100%;
 
     > svg {
       font-size: $lg-font-size;
       color: $color-primary;
       margin: 0 $spacing-sm;
+      display: block;
+    }
+
+    > span,
+    > svg:last-child {
+      display: none;
+    }
+
+    @media (min-width: $breakpoint-sm) {
+      > span,
+      > svg:last-child {
+        display: inline;
+      }
     }
   }
 
   .dropdown-menu {
     position: absolute;
     background-color: $bg-secondary;
-    width: 100%;
+    width: 20rem;
     left: 0;
-    margin-top: $spacing-xs;
+    right: auto;
     box-shadow: $shadow-md rgba(0, 0, 0);
-    border-radius: 0 0 $size-xs $size-xs;
+    border-radius: $size-xs 0 $size-xs $size-xs;
     overflow: hidden;
     display: none;
     height: auto;
+    margin-top: $spacing-sm;
     z-index: $z-index-dropdown;
 
     li {
@@ -85,6 +93,14 @@
       &:active {
         background-color: #7f7f7f;
       }
+    }
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    .dropdown-menu {
+      top: 100%; /* Ajusta la posición del menú para que se despliegue hacia abajo */
+      left: auto; /* Ajusta la posición del menú para que esté alineado a la izquierda */
+      right: 0;
     }
   }
 

@@ -8,34 +8,26 @@ export const resetListToStorage = () => {
 export const defaultTodos = [
   {
     text: "Cortar cebolla",
-    date: new Date("2024-03-04T12:00:00Z"),
+    createDate: new Date("2024-03-04T12:00"),
+    endDate: new Date("2024-03-04T19:00"),
     completed: true,
   },
   {
     text: "Comprar tomate",
-    date: new Date("2024-03-05T12:00:00Z"),
+    createDate: new Date("2024-03-05T13:00"),
+    endDate: new Date("2024-03-10T14:00"),
     completed: false,
   },
   {
     text: "Pasear al perro",
-    date: new Date("2024-03-06T12:00:00Z"),
-    completed: true,
-  },
-  { text: "Saltar", date: new Date("2024-03-01T12:00:00Z"), completed: false },
-  {
-    text: "Cortar cebollas",
-    date: new Date("2024-03-04T12:00:00Z"),
+    createDate: new Date("2024-03-06T17:00"),
+    endDate: new Date("2024-03-08T11:00"),
     completed: true,
   },
   {
-    text: "Comprar tomates",
-    date: new Date("2024-03-05T12:00:00Z"),
+    text: "Saltar",
+    createDate: new Date("2024-03-01T10:00"),
+    endDate: new Date("2024-03-04T15:00"),
     completed: false,
   },
-  {
-    text: "Pasear al perros",
-    date: new Date("2024-03-06T12:00:00Z"),
-    completed: true,
-  },
-  { text: "Saltars", date: new Date("2024-03-01T12:00:00Z"), completed: false },
 ];

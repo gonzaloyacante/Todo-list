@@ -1,0 +1,20 @@
+// Estilos para el selector de fecha personalizado
+.datepicker-container {
+  margin-bottom: $spacing-md;
+
+  .datepicker-label {
+    font-weight: bold;
+    margin-bottom: $spacing-xs;
+  }
+
+  .datepicker-input {
+    padding: $spacing-sm;
+    border: 1px solid $color-secondary;
+    border-radius: $size-xs;
+    color: $text-primary;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

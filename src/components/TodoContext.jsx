@@ -15,7 +15,7 @@ function TodoProvider({ children }) {
   const [searchValue, setSearchValue] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
-  const [openModal, setOpenModal] = useState(false);
+  const [isOpenModal, setIsOpenModal] = useState(false);
   const [sortBy, setSortBy] = useState('date');
 
   useEffect(() => {
@@ -65,8 +65,8 @@ function TodoProvider({ children }) {
         defaultTodos,
         saveListToStorage,
         resetListToStorage,
-        openModal,
-        setOpenModal,
+        isOpenModal,
+        setIsOpenModal,
         formatTodoDate,
         sortBy,
         setSortBy,

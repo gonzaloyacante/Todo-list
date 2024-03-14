@@ -1,0 +1,26 @@
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $spacing-md;
+}
+
+.todo-form input[type="text"] {
+  padding: $spacing-sm;
+  margin-bottom: $spacing-sm;
+  border: 1px solid $color-secondary;
+  border-radius: $size-xs;
+  color: $text-primary;
+}
+
+.todo-form button {
+  padding: $spacing-sm $spacing-md;
+  background-color: $color-primary;
+  color: $text-primary;
+  border: none;
+  border-radius: $size-xs;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($color-primary, 10%);
+  }
+}

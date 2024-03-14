@@ -3,13 +3,16 @@
 @import "./base/resets";
 
 // Components.
-@import "./App.scss";
+@import "./app.scss";
 @import "./components/todoItems.scss";
 @import "./components/todoList.scss";
 @import "./components/todoSearch.scss";
 @import "./components/handleTodoButton.scss";
 @import "./components/skeletonLoader.scss";
 @import "./components/todoSortButton.scss";
+@import "./components/modal.scss";
+@import "./components/todoForm.scss";
+@import "./components/customDatePicker.scss";
 
 // Animations.
 @import "animate.css";

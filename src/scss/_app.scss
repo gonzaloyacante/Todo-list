@@ -1,0 +1,71 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+  height: 100vh;
+}
+
+header {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: $spacing-sm;
+  margin: $spacing-sm 0;
+}
+
+header > *:nth-child(1) {
+  width: 100%;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+header > *:nth-child(2) {
+  width: auto;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+header > *:nth-child(3) {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+main {
+  width: 90%;
+}
+
+@media (min-width: $breakpoint-sm) {
+  header {
+    max-width: 90%;
+  }
+  main {
+    width: 80%;
+  }
+}
+
+@media (min-width: $breakpoint-md) {
+  main {
+    width: 70%;
+  }
+}
+
+@media (min-width: $breakpoint-xl) {
+  main {
+    width: 60%;
+  }
+}

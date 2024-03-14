@@ -18,7 +18,7 @@ function TodoCounter() {
           )}
           {completedTodos !== totalTodos && (
             <span className="animate__animated animate__fadeIn">
-              {completedTodos} de {totalTodos}
+              {completedTodos} de {totalTodos} Tareas
             </span>
           )}
         </>

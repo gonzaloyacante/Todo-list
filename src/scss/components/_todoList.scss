@@ -1,8 +1,8 @@
 .container-list {
-  width: 80vw;
   height: 65vh;
   border: 0.1rem solid #ccc;
   overflow-y: auto;
+  overflow-x: hidden;
   border: none;
 }
 

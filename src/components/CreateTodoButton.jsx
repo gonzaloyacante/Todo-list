@@ -1,13 +1,13 @@
 import { FaPlus } from "react-icons/fa";
 
-function CreateTodoButton() {
+const CreateTodoButton = ({ isOpenModal, setIsOpenModal }) => {
   return (
     <div
       className="todo-handle_button todo-create_button"
-      onClick={(event) => console.log("Hola", event)}>
+      onClick={() => setIsOpenModal(!isOpenModal)}>
       <FaPlus />
     </div>
   );
-}
+};
 
 export { CreateTodoButton };

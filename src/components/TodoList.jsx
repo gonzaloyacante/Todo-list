@@ -40,10 +40,12 @@ function TodoList() {
           <TodoItem
             key={todo.text}
             text={todo.text}
-            date={todo.date}
+            createDate={todo.createDate}
+            endDate={todo.endDate}
             formatTodoDate={formatTodoDate}
             completed={todo.completed}
             setTodos={setTodos}
+            todos={todos}
           />
         ))}
     </ul>

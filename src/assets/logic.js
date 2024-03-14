@@ -1,17 +1,17 @@
 export const sortedTodos = (todos, sortBy) => {
   return [...todos].sort((a, b) => {
     switch (sortBy) {
-      case 'dateRecent':
-        return new Date(b.date) - new Date(a.date);
-      case 'dateOld':
-        return new Date(a.date) - new Date(b.date);
-      case 'alphabeticalAZ':
+      case "dateRecent":
+        return new Date(b.createDate) - new Date(a.createDate);
+      case "dateOld":
+        return new Date(a.createDate) - new Date(b.createDate);
+      case "alphabeticalAZ":
         return a.text.localeCompare(b.text);
-      case 'alphabeticalZA':
+      case "alphabeticalZA":
         return b.text.localeCompare(a.text);
-      case 'completedFirst':
+      case "completedFirst":
         return a.completed === b.completed ? 0 : a.completed ? -1 : 1;
-      case 'completedLast':
+      case "completedLast":
         return a.completed === b.completed ? 0 : a.completed ? 1 : -1;
       default:
         return 0;
@@ -20,40 +20,51 @@ export const sortedTodos = (todos, sortBy) => {
 };
 
 export const searchedTodos = (sortedTodos, searchValue) => {
-  return sortedTodos.filter((todo) =>
-    todo.text.toLowerCase().includes(searchValue.toLowerCase())
+  return sortedTodos.filter(
+    (todo) =>
+      todo.text && todo.text.toLowerCase().includes(searchValue.toLowerCase())
   );
 };
 
-export const handleCompleteTask = (text, setTodos) => {
-  setTodos((prevTodos) =>
-    prevTodos.map((todo) => {
-      if (todo.text === text) {
-        return { ...todo, completed: !todo.completed };
-      }
-      return todo;
-    })
-  );
+export const handleCompleteTask = (text, todos) => {
+  return todos.map((todo) => {
+    if (todo.text === text) {
+      return { ...todo, completed: !todo.completed };
+    }
+    return todo;
+  });
 };
 
-export const handleDeleteTask = (event, text, setTodos) => {
+export const handleDeleteTask = (event, text, updateTodos) => {
   const element = event.currentTarget.parentElement;
   element.classList.add("animate__animated", "animate__bounceOutRight");
   setTimeout(() => {
-    setTodos((prevTodos) => prevTodos.filter((todo) => todo.text !== text));
-  }, 500); // Ajusta este tiempo según la duración de tu animación
+    updateTodos((prevTodos) => prevTodos.filter((todo) => todo.text !== text));
+  }, 500);
 };
 
 export const formatTodoDate = (date) => {
   if (!date || isNaN(new Date(date))) {
-    return ''; // retorna una cadena vacía si la fecha es nula o no válida
+    return "";
   }
 
-  return new Date(date).toLocaleString('es-ES', {
-    day: '2-digit',
-    month: '2-digit',
-    year: '2-digit',
-    hour: '2-digit',
-    minute: '2-digit',
-  });
+  const options = {
+    day: "2-digit",
+    month: "2-digit",
+    year: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+  };
+
+  return new Intl.DateTimeFormat("es-ES", options).format(new Date(date));
+};
+
+export const handleSubmitTodoForm = (formData) => {
+  const newTodo = {
+    text: formData.text,
+    createDate: new Date(),
+    endDate: new Date(formData.endDate),
+    completed: false,
+  };
+  return newTodo;
 };

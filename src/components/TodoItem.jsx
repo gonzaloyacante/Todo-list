@@ -2,9 +2,11 @@ import { FaCheck, FaTimes } from "react-icons/fa";
 import { handleCompleteTask, handleDeleteTask } from "../assets/logic";
 
 function TodoItem(props) {
-  const { text, date, completed, setTodos, formatTodoDate } = props;
+  const { text, createDate, endDate, completed, setTodos, todos, formatTodoDate } =
+    props;
 
-  const formattedDate = formatTodoDate(date);
+  const formattedCreateDate = formatTodoDate(createDate);
+  const formattedEndDate = formatTodoDate(endDate);
 
   return (
     <li
@@ -14,12 +16,13 @@ function TodoItem(props) {
       <div className="item">
         <span
           className="item-icon_check"
-          onClick={() => handleCompleteTask(text, setTodos)}>
+          onClick={() => setTodos(handleCompleteTask(text, todos))}>
           {completed && <FaCheck className="item-icon" />}
         </span>
         <div className="item-content">
           <p className="item-text">{text}</p>
-          <p className="item-date">Creado: {formattedDate}</p>
+          <p className="item-date">Creado: {formattedCreateDate}</p>
+          <p className="item-date">Para: {formattedEndDate}</p>
         </div>
         <FaTimes
           onClick={(event) => handleDeleteTask(event, text, setTodos)}

@@ -6,8 +6,8 @@
   align-items: center;
   color: $text-primary;
   background-color: $bg-secondary;
-  margin: $spacing-sm 0;
   border-radius: $size-xs;
+  box-shadow: $shadow-md rgba(0, 0, 0, 0.2);
 }
 
 .todo-search_label:focus {

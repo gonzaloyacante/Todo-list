@@ -34,24 +34,22 @@ const TodoSortButton = ({ sortBy, setSortBy }) => {
   const selectedOption = options.find((opt) => opt.id === sortBy);
 
   return (
-    <div className="container">
-      <div
-        className={`dropdown ${isActive && "active"}`}
-        onClick={() => setIsActive(!isActive)}>
-        <div className="select">
-          {selectedOption ? selectedOption.icon : <FaSort />}
-          {selectedOption ? selectedOption.label : "Ordenar por"}
-          <FaCaretDown />
-        </div>
-        <ul className="dropdown-menu">
-          {options.map((option) => (
-            <li key={option.id} onClick={() => handleOptionClick(option.id)}>
-              {option.icon}
-              {option.label}
-            </li>
-          ))}
-        </ul>
+    <div
+      className={`dropdown-container ${isActive && "active"}`}
+      onClick={() => setIsActive(!isActive)}>
+      <div className="select">
+        {selectedOption ? selectedOption.icon : <FaSort />}
+        <span>{selectedOption ? selectedOption.label : "Ordenar por"}</span>
+        <FaCaretDown />
       </div>
+      <ul className="dropdown-menu">
+        {options.map((option) => (
+          <li key={option.id} onClick={() => handleOptionClick(option.id)}>
+            {option.icon}
+            {option.label}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
