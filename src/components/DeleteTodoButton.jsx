@@ -1,16 +1,7 @@
-import { useContext } from "react";
-import { FaPlus, FaUndoAlt } from "react-icons/fa";
-import { TodoContext } from "./TodoContext";
+import { FaUndoAlt } from "react-icons/fa";
 
-function CreateTodoButton() {
-  return (
-    <div
-      className="todo-handle_button todo-create_button"
-      onClick={(event) => console.log("Hola", event)}>
-      <FaPlus />
-    </div>
-  );
-}
+import { useContext } from "react";
+import { TodoContext } from "./TodoContext";
 
 function DeleteTodoButton() {
   const { resetListToStorage, setTodos, defaultTodos } =
@@ -27,4 +18,4 @@ function DeleteTodoButton() {
   );
 }
 
-export { CreateTodoButton, DeleteTodoButton };
+export { DeleteTodoButton };

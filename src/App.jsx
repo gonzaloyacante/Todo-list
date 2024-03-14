@@ -6,12 +6,9 @@ import { TodoCounter } from "./components/TodoCounter";
 import { TodoSearch } from "./components/TodoSearch";
 import { TodoSortButton } from "./components/TodoSortButton.jsx";
 import { TodoList } from "./components/TodoList";
+import { CreateTodoButton } from "./components/CreateTodoButton.jsx";
+import { DeleteTodoButton } from "./components/DeleteTodoButton.jsx";
 import { Modal } from "./components/Modal";
-
-import {
-  CreateTodoButton,
-  DeleteTodoButton,
-} from "./components/HandleTodoButton.jsx";
 
 import { TodoContext } from "./components/TodoContext.jsx";
 
