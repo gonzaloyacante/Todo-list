@@ -15,16 +15,6 @@
   background-color: $bg-secondary;
   padding: $spacing-md;
   border-radius: $size-xs;
-  box-shadow: $shadow-lg $color-primary;
-  position: relative;
-  max-width: 80%;
-}
-
-.close-button {
-  position: absolute;
-  top: $spacing-sm;
-  right: $spacing-sm;
-  background: none;
-  border: none;
-  cursor: pointer;
+  box-shadow: $shadow-lg $bg-primary;
+  max-width: 90%;
 }

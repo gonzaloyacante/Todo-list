@@ -58,13 +58,15 @@ export const formatTodoDate = (date) => {
 
   return new Intl.DateTimeFormat("es-ES", options).format(new Date(date));
 };
-
-export const handleSubmitTodoForm = (formData) => {
+export const handleSubmitTodoForm = (formData, todos) => {
   const newTodo = {
     text: formData.text,
     createDate: new Date(),
     endDate: new Date(formData.endDate),
     completed: false,
   };
-  return newTodo;
+
+  const newTodos = [...todos, newTodo];
+
+  return newTodos;
 };

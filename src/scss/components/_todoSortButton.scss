@@ -4,6 +4,7 @@
   display: inline-block;
   background-color: $bg-secondary;
   border-radius: $size-xs;
+  border: 0.2rem solid $bg-secondary;
   box-shadow: $shadow-md rgba(0, 0, 0, 0.2);
   transition: all 0.5s ease;
   position: relative;
@@ -21,6 +22,7 @@
 
   &.active {
     box-shadow: $shadow-md rgba(0, 0, 0, 0.4);
+    border: 0.2rem solid $color-primary;
     background-color: $bg-secondary;
     border-radius: $size-xs $size-xs 0 0;
     transform-origin: center;

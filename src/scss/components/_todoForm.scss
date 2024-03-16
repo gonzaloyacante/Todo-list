@@ -1,26 +1,85 @@
 .todo-form {
   display: flex;
   flex-direction: column;
-  margin-bottom: $spacing-md;
-}
+  gap: $spacing-xs;
 
-.todo-form input[type="text"] {
-  padding: $spacing-sm;
-  margin-bottom: $spacing-sm;
-  border: 1px solid $color-secondary;
-  border-radius: $size-xs;
-  color: $text-primary;
-}
+  .todo-form-input_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 
-.todo-form button {
-  padding: $spacing-sm $spacing-md;
-  background-color: $color-primary;
-  color: $text-primary;
-  border: none;
-  border-radius: $size-xs;
-  cursor: pointer;
+    .todo-form-label {
+      position: absolute;
+      font-size: $sm-font-size;
+      color: $color-primary;
+      font-weight: 700;
+      position: relative;
+      top: 0.3rem;
+      margin: 0 $spacing-xs 0 $spacing-sm;
+      padding: 0 $spacing-xs;
+      background-color: $bg-secondary;
+      width: fit-content;
+      height: $size-xs;
+    }
 
-  &:hover {
-    background-color: darken($color-primary, 10%);
+    .todo-form-input {
+      padding: $spacing-sm;
+      font-size: $sm-font-size;
+      border: 0.2rem solid $color-primary;
+      border-radius: $size-xs;
+      background-color: $bg-secondary;
+      margin-bottom: $spacing-sm;
+      color: $text-primary;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .todo-form-button_container {
+    display: flex;
+    gap: $spacing-xs;
+  }
+
+  .todo-form-button_add,
+  .todo-form-button_cancel {
+    display: grid;
+    place-items: center;
+    background-color: transparent;
+    color: $text-primary;
+    border: none;
+    border-radius: $size-xs;
+    cursor: pointer;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+  }
+
+  .todo-form-button_add {
+    border: 0.2rem solid $color-primary;
+    // border: 0.2rem solid darken($color-primary, 8%);
+    color: $text-primary;
+    width: auto;
+    height: $size-lg;
+    flex-grow: 1;
+  }
+  .todo-form-button_add:hover {
+    background-color: $color-primary;
+    // background-color: darken($color-primary, 8%);
+  }
+  .todo-form-button_cancel {
+    border: 0.2rem solid $color-error;
+    color: $color-error;
+    margin: 0;
+    flex-grow: 0;
+    width: $size-lg;
+    height: $size-lg;
+
+    > svg {
+      font-size: $size-sm;
+    }
   }
 }

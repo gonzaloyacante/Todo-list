@@ -10,7 +10,7 @@ import { TodoForm } from "./components/TodoForm.jsx";
 import { TodoContext } from "./components/TodoContext.jsx";
 
 function App() {
-  const { isOpenModal, setIsOpenModal, sortBy, setSortBy, setTodos } =
+  const { isOpenModal, setIsOpenModal, sortBy, setSortBy, todos, setTodos } =
     useContext(TodoContext);
 
   return (
@@ -31,7 +31,11 @@ function App() {
 
       {isOpenModal && (
         <Modal setIsOpenModal={setIsOpenModal}>
-          <TodoForm setIsOpenModal={setIsOpenModal} setTodos={setTodos} />
+          <TodoForm
+            setIsOpenModal={setIsOpenModal}
+            todos={todos}
+            setTodos={setTodos}
+          />
         </Modal>
       )}
     </>

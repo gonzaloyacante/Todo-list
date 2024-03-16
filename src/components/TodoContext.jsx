@@ -16,7 +16,7 @@ function TodoProvider({ children }) {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
   const [isOpenModal, setIsOpenModal] = useState(false);
-  const [sortBy, setSortBy] = useState('date');
+  const [sortBy, setSortBy] = useState('completedLast');
 
   useEffect(() => {
     const fetchData = () => {
